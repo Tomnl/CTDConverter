@@ -27,8 +27,8 @@ install:
   - cd $HOME/CTDopts
   - python setup.py install 
   - conda install -c conda-forge lxml
-  - conda install --channel conda-forge ruamel.yaml 
-  - conda install libxml2=2.9.2
+  - conda install -c conda-forge ruamel.yaml 
+  - conda install libxml2
   - cd $TRAVIS_BUILD_DIR
   - python setup.py install
 
