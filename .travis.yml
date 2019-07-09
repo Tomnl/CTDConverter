@@ -29,8 +29,7 @@ install:
   - conda install lxml
   - conda install --channel conda-forge ruamel.yaml 
   - conda install libxml2=2.9.2
-  - cd 
-  - cd CTDConverter
+  - cd $TRAVIS_BUILD_DIR
   - python setup.py install
 
   - conda install coverage green codecov
