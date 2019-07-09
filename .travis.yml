@@ -20,7 +20,7 @@ install:
   - source activate test-environment
   - conda config --add channels conda-forge
   - conda config --add channels bioconda
-  - conda config --add anaconda
+  - conda config --add channels anaconda
   - conda config --add channels workflowconversion
 
   - git clone https://github.com/WorkflowConversion/CTDopts $HOME/CTDopts
