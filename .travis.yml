@@ -18,6 +18,10 @@ install:
 
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION
   - source activate test-environment
+  - conda config --add channels conda-forge
+  - conda config --add channels bioconda
+  - conda config --add channels workflowconversion
+
   - git clone https://github.com/WorkflowConversion/CTDopts $HOME/CTDopts
   - cd $HOME/CTDopts
   - python setup.py install 
@@ -27,8 +31,9 @@ install:
   - cd 
   - python setup.py install
 
+  - conda install coverage green codecov
+
 script:
-  - dimspy --help
   - python setup.py test
 
 after_script:
